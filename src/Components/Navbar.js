@@ -1,26 +1,50 @@
 import React from 'react';
-import '../App.css';
-import CloudOnePage from './CloudOnePage';
-import AboutPage from './AboutPage';
 import { Link } from 'react-router-dom';
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import { Toolbar } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
+
+const useStyles = makeStyles((theme) => ({
+	root: {
+		flexGrow: 1
+	},
+	menuButton: {
+		marginRight: theme.spacing(2)
+	},
+	title: {
+		flexGrow: 1
+	},
+	titleHeader: {
+		textDecoration: 'none',
+		color: 'white',
+		'&:hover': {
+			color: 'red',
+			textDecoration: 'none'
+		}
+	}
+}));
 
 function Navbar() {
-	const navStyle = {
-		color: 'white'
-	};
+	const classes = useStyles();
 
 	return (
-		<nav>
-			<ul className='nav-links'>
-				<h3>LOGO</h3>
-				<Link style={navStyle} to='/about'>
-					<li>About</li>
-				</Link>
-				<Link style={navStyle} to='/cloudOne'>
-					<li>CloudOne</li>
-				</Link>
-			</ul>
-		</nav>
+		<div className={classes.root}>
+			<AppBar position='static'>
+				<Toolbar>
+					<Typography variant='h6' className={classes.title}>
+						<Link to='/production' className={classes.titleHeader}>
+							Staging/Development
+						</Link>
+					</Typography>
+					<Typography variant='h6' className={classes.title}>
+						<Link to='/cloudOne' className={classes.titleHeader}>
+							CloudOne
+						</Link>
+					</Typography>
+				</Toolbar>
+			</AppBar>
+		</div>
 	);
 }
 
