@@ -1,8 +1,6 @@
 import React from 'react';
-import MainUtilities from '../images/PCF Control Plane.jpg';
+import MainUtilities from '../style/images/PCF Control Plane.jpg';
 import { Typography } from '@material-ui/core';
-// import productionImage from '../images/';
-// import stagingImage from '../images/';
 
 function Production() {
 	return (

@@ -1,9 +1,8 @@
 import React from 'react';
-import { Grid, Typography, Paper, Button } from '@material-ui/core';
+import { Grid, Typography, Paper } from '@material-ui/core';
 import MediaCard from './MediaCard';
 import Development from './Development';
 import NonProd from './NonProd';
-import EnvModal from './EnvModal';
 
 function CloudOnePage() {
 	const [ open, setOpen ] = React.useState(false);
@@ -30,7 +29,6 @@ function CloudOnePage() {
 					<Grid item container direction='row' spacing={2}>
 						<Grid item xs={6}>
 							<Development />
-							{/* <EnvModal /> */}
 						</Grid>
 						<Grid item xs={6}>
 							<NonProd />

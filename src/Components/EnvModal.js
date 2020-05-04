@@ -1,12 +1,9 @@
 import React from 'react';
-import { Button, Dialog, DialogActions } from '@material-ui/core';
+import { Button, Dialog } from '@material-ui/core';
 import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-
-import DialogTitle from '@material-ui/core/DialogTitle';
-import devImage from '../images/development.jpg';
+import devImage from '../style/images/development.jpg';
 import CardMedia from '@material-ui/core/CardMedia';
 
 const useStyles = makeStyles({
