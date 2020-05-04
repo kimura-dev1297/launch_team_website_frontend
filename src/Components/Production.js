@@ -1,15 +1,16 @@
 import React from 'react';
 import MainUtilities from '../images/S31 Services - PCF Control Plane.jpg';
+import { Typography } from '@material-ui/core';
 // import productionImage from '../images/';
 // import stagingImage from '../images/';
 
 function Production() {
 	return (
 		<div>
-			<h1>Staging</h1>
+			<Typography>Staging</Typography>
 			<img src={MainUtilities} alt='' />
 			{/* <img src={stagingImage} alt='' /> */}
-			<h1>Production</h1>
+			<Typography>Production</Typography>
 			{/* <img src={productionImage} alt='' /> */}
 		</div>
 	);

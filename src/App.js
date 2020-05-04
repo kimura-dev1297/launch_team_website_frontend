@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Navbar from './Components/Navbar';
 import Production from './Components/Production';
 import CloudOnePage from './Components/CloudOnePage';
@@ -26,16 +25,6 @@ function App() {
 				</Grid>
 			</Grid>
 		</Router>
-
-		// <Router>
-		// 	<div className='App'>
-		// 		<Navbar />
-		// 		<Switch>
-		// 			<Route path='/production' component={Production} />
-		// 			<Route path='/cloudOne' component={CloudOnePage} />
-		// 		</Switch>
-		// 	</div>
-		// </Router>
 	);
 }
 
