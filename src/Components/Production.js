@@ -1,5 +1,5 @@
 import React from 'react';
-import MainUtilities from '../images/S31 Services - PCF Control Plane.jpg';
+import MainUtilities from '../images/PCF Control Plane.jpg';
 import { Typography } from '@material-ui/core';
 // import productionImage from '../images/';
 // import stagingImage from '../images/';

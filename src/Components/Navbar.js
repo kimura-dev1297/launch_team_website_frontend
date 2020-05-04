@@ -33,7 +33,7 @@ function Navbar() {
 						</Link>
 					</Typography>
 					<Typography variant='h6' className={classes.title}>
-						<Link to='/cloudOne' className={classes.titleHeader}>
+						<Link to='/cloud-one' className={classes.titleHeader}>
 							CloudOne
 						</Link>
 					</Typography>

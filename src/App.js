@@ -15,12 +15,14 @@ function App() {
 				<Grid item container>
 					{/* This is first side panel */}
 					<Grid item xs={0} sm={2} />
+					{/* This is the main content */}
 					<Grid item xs={12} sm={8}>
 						<Switch>
 							<Route path='/production' component={Production} />
-							<Route path='/cloudOne' component={CloudOnePage} />
+							<Route path='/cloud-one' component={CloudOnePage} />
 						</Switch>
 					</Grid>
+					{/* This is second side panel */}
 					<Grid item xs={0} sm={2} />
 				</Grid>
 			</Grid>

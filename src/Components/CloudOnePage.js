@@ -1,23 +1,47 @@
 import React from 'react';
-import { Grid, Typography } from '@material-ui/core';
-import MediaCard from './MainCard';
+import { Grid, Typography, Paper, Button } from '@material-ui/core';
+import MediaCard from './MediaCard';
+import Development from './Development';
+import NonProd from './NonProd';
+import EnvModal from './EnvModal';
 
 function CloudOnePage() {
+	const [ open, setOpen ] = React.useState(false);
+
+	const handleOpen = () => {
+		setOpen(true);
+	};
+
+	const handleClose = () => {
+		setOpen(false);
+	};
 	return (
-		// <div>
-		// 	<Typography>CloudOne</Typography>
-		// 	<img src={MainUtils} />
-		// </div>
-		<Grid container direction='column'>
-			<Grid>
-				<Typography>CloudOne</Typography>
+		<Paper>
+			<Grid container direction='column'>
+				<Grid item container justify='center'>
+					<Grid item xs={12}>
+						<Typography>CloudOne Work Flow</Typography>
+					</Grid>
+					<Grid item container justify='center'>
+						<Grid item xs={12} style={{ paddingBottom: '3.5rem' }}>
+							<MediaCard />
+						</Grid>
+					</Grid>
+					<Grid item container direction='row' spacing={2}>
+						<Grid item xs={6}>
+							<Development />
+							{/* <EnvModal /> */}
+						</Grid>
+						<Grid item xs={6}>
+							<NonProd />
+						</Grid>
+					</Grid>
+				</Grid>
 			</Grid>
-			<Grid item xs={12}>
-				{/* <img src={MainUtils} /> */}
-				<MediaCard />
-			</Grid>
-		</Grid>
+		</Paper>
 	);
 }
+
+// C1D flow as dev>nonprod
 
 export default CloudOnePage;
