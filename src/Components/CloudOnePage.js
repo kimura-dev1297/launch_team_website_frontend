@@ -1,8 +1,9 @@
 import React from 'react';
 import { Grid, Typography, Paper } from '@material-ui/core';
-import MediaCard from './MediaCard';
-import Development from './Development';
-import NonProd from './NonProd';
+import cntrlPaneImg from '../style/images/PCF Control Plane.jpg';
+import devImg from '../style/images/development.jpg';
+import nonProdImg from '../style/images/S31 Services - Non-Prod.jpg';
+import EnvImg from './EnvImg';
 
 function CloudOnePage() {
 	const [ open, setOpen ] = React.useState(false);
@@ -23,15 +24,15 @@ function CloudOnePage() {
 					</Grid>
 					<Grid item container justify='center'>
 						<Grid item xs={12} style={{ paddingBottom: '3.5rem' }}>
-							<MediaCard />
+							<EnvImg img={cntrlPaneImg} alt='Control Pane' />
 						</Grid>
 					</Grid>
 					<Grid item container direction='row' spacing={2}>
 						<Grid item xs={6}>
-							<Development />
+							<EnvImg img={devImg} alt='Development environment' />
 						</Grid>
 						<Grid item xs={6}>
-							<NonProd />
+							<EnvImg img={nonProdImg} alt='Non prod environment' />
 						</Grid>
 					</Grid>
 				</Grid>

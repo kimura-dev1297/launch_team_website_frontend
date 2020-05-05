@@ -6,22 +6,22 @@ import EnvModal from './EnvModal';
 
 const useStyles = makeStyles({
 	root: {
-		maxWidth: 600,
+		maxWidth: 500,
 		justifyContent: 'center'
 	},
 	media: {
-		height: '100%'
+		height: '100%',
+		width: '100%'
 	}
 });
 
-export default function MediaCard() {
+export default function EnvImg({ img, alt }) {
 	const classes = useStyles();
 
 	return (
 		<Card className={classes.root}>
 			<CardActionArea>
-				<EnvModal media={makeStyles.media} />
-				{/* <CardMedia component='img' className={classes.media} image={devImage} title='Control Panel tools' /> */}
+				<EnvModal media={makeStyles.media} img={img} title={alt} />
 			</CardActionArea>
 		</Card>
 	);

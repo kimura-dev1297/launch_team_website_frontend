@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './Components/Navbar';
-import Production from './Components/Production';
+import Production from './Components/ProductionPage';
 import CloudOnePage from './Components/CloudOnePage';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Grid } from '@material-ui/core';

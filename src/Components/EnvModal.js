@@ -1,9 +1,9 @@
 import React from 'react';
-import { Button, Dialog } from '@material-ui/core';
+import { Button, Dialog, IconButton } from '@material-ui/core';
+import CloseIcon from '@material-ui/icons/Close';
 import DialogContent from '@material-ui/core/DialogContent';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import devImage from '../style/images/development.jpg';
 import CardMedia from '@material-ui/core/CardMedia';
 
 const useStyles = makeStyles({
@@ -17,7 +17,7 @@ const useStyles = makeStyles({
 	}
 });
 
-export default function EnvModal() {
+export default function EnvModal({ img, title }) {
 	const classes = useStyles();
 
 	const [ open, setOpen ] = React.useState(false);
@@ -33,8 +33,9 @@ export default function EnvModal() {
 	return (
 		<div>
 			<Button variant='outlined' color='primary' onClick={handleClickOpen}>
-				<CardMedia component='img' className={classes.media} image={devImage} title='Control Panel tools' />
+				<CardMedia component='img' className={classes.media} image={img} title={title} />
 			</Button>
+
 			<Dialog
 				fullScreen
 				open={open}
@@ -42,15 +43,13 @@ export default function EnvModal() {
 				aria-labelledby='alert-dialog-title'
 				aria-describedby='alert-dialog-description'
 			>
+				<IconButton edge='start' color='inherit' onClick={handleClose} aria-label='close'>
+					<CloseIcon />
+				</IconButton>
 				<Grid item container xs={8}>
 					<Grid item alignItems='center' justify='center'>
 						<DialogContent>
-							<CardMedia
-								component='img'
-								className={classes.media}
-								image={devImage}
-								title='Control Panel tools'
-							/>
+							<CardMedia component='img' className={classes.media} image={img} title={title} />
 						</DialogContent>
 					</Grid>
 				</Grid>
