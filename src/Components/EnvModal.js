@@ -32,7 +32,7 @@ export default function EnvModal({ img, title }) {
 
 	return (
 		<div>
-			<Button variant='outlined' color='primary' onClick={handleClickOpen}>
+			<Button variant='contained' color='primary' onClick={handleClickOpen}>
 				<CardMedia component='img' className={classes.media} image={img} title={title} />
 			</Button>
 
@@ -47,7 +47,7 @@ export default function EnvModal({ img, title }) {
 					<CloseIcon />
 				</IconButton>
 				<Grid item container xs={8}>
-					<Grid item alignItems='center' justify='center'>
+					<Grid item>
 						<DialogContent>
 							<CardMedia component='img' className={classes.media} image={img} title={title} />
 						</DialogContent>

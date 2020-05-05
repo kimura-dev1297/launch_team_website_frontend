@@ -1,19 +1,44 @@
 import React from 'react';
-import MainUtilities from '../style/images/PCF Control Plane.jpg';
-import { Typography } from '@material-ui/core';
+import { Grid, Typography, Paper } from '@material-ui/core';
+import cntrlPaneImg from '../style/images/PCF Control Plane.jpg';
+import stagingImg from '../style/images/Staging.jpg';
+import prodImg from '../style/images/production.jpg';
+import prodBottomImg from '../style/images/production-bottom.jpg';
 
-function Production() {
+import EnvImg from './EnvImg';
+
+function ProductionPage() {
 	return (
-		<div>
-			<Typography>Staging</Typography>
-			<img src={MainUtilities} alt='' />
-			{/* <img src={stagingImage} alt='' /> */}
-			<Typography>Production</Typography>
-			{/* <img src={productionImage} alt='' /> */}
-		</div>
+		<Paper>
+			<Grid container direction='column'>
+				<Grid item container justify='center'>
+					<Grid item container justify='center' alignItems='center' xs={12} style={{ paddingTop: '1.5rem' }}>
+						<Typography variant='h6' gutterBottom>
+							Available Developer Tools
+						</Typography>
+					</Grid>
+					<Grid item justify='center' alignItems='center'>
+						<Grid item xs={12} style={{ paddingBottom: '1.5rem' }}>
+							<EnvImg img={cntrlPaneImg} alt='Available Developer Tools' />
+						</Grid>
+					</Grid>
+					<Grid item container direction='row' spacing={4}>
+						<Grid item xs={12} sm={6}>
+							<EnvImg img={stagingImg} alt='Staging environment' />
+						</Grid>
+						<Grid item xs={12} sm={6}>
+							<EnvImg img={prodImg} alt='Production environment' />
+						</Grid>
+					</Grid>
+				</Grid>
+			</Grid>
+			<Grid item container direction='column' justify='center' alignItems='center'>
+				<Grid item xs={12} sm={6} style={{ paddingTop: '1.5rem', paddingBottom: '1.5rem' }}>
+					<EnvImg img={prodBottomImg} alt='Production environment' />
+				</Grid>
+			</Grid>
+		</Paper>
 	);
 }
 
-// and keep the prod flow as staging>prod
-
-export default Production;
+export default ProductionPage;

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Toolbar } from '@material-ui/core';
+import NavEnvMenu from './NavEnvMenu';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -27,16 +27,7 @@ function Navbar() {
 		<div className={classes.root}>
 			<AppBar position='static'>
 				<Toolbar>
-					<Typography variant='h6' className={classes.title}>
-						<Link to='/production' className={classes.titleHeader}>
-							Production
-						</Link>
-					</Typography>
-					<Typography variant='h6' className={classes.title}>
-						<Link to='/cloud-one' className={classes.titleHeader}>
-							CloudOne
-						</Link>
-					</Typography>
+					<NavEnvMenu />
 				</Toolbar>
 			</AppBar>
 		</div>
