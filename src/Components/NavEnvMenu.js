@@ -30,7 +30,13 @@ export default function NavEnvMenu() {
 
 	return (
 		<div>
-			<Button aria-controls='simple-menu' aria-haspopup='true' onClick={handleClick}>
+			<Button
+				aria-controls='simple-menu'
+				aria-haspopup='true'
+				onClick={handleClick}
+				variant='contained'
+				size='medium'
+			>
 				<Typography variant='h6' className={classes.title}>
 					Environments
 				</Typography>
