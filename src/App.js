@@ -1,12 +1,16 @@
 import React from 'react';
 import Navbar from './Components/Navbar';
-import Production from './Components/ProductionPage';
-import CloudOnePage from './Components/CloudOnePage';
+import ProdEnvPage from './Components/ProdEnvPage';
+import DevEnvPage from './Components/DevEnvPage';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Grid } from '@material-ui/core';
 import MetroidPage from './Components/Apps/MetroidPage';
+import StarfoxPage from './Components/Apps/StarfoxPage';
+import OutrunPage from './Components/Apps/OutrunPage';
+import GorfPage from './Components/Apps/GorfPage';
+import NovaPage from './Components/Apps/NovaPage';
 
-function App() {
+const App = () => {
 	return (
 		<Router>
 			<Grid container direction='column'>
@@ -19,9 +23,13 @@ function App() {
 					{/* This is the main content */}
 					<Grid item xs={12} sm={8}>
 						<Switch>
-							<Route path='/production' component={Production} />
-							<Route path='/cloud-one' component={CloudOnePage} />
+							<Route path='/environment/production' component={ProdEnvPage} />
+							<Route path='/environment/dev' component={DevEnvPage} />
 							<Route path='/app/metroid' component={MetroidPage} />
+							<Route path='/app/starfox' component={StarfoxPage} />
+							<Route path='/app/outrun' component={OutrunPage} />
+							<Route path='/app/gorf' component={GorfPage} />
+							<Route path='/app/nova' component={NovaPage} />
 						</Switch>
 					</Grid>
 					{/* This is second side panel */}
@@ -30,6 +38,6 @@ function App() {
 			</Grid>
 		</Router>
 	);
-}
+};
 
 export default App;

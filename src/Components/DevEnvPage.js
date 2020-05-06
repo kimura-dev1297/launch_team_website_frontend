@@ -5,7 +5,7 @@ import devImg from '../style/images/development.jpg';
 import nonProdImg from '../style/images/S31 Services - Non-Prod.jpg';
 import EnvImg from './EnvImg';
 
-function CloudOnePage() {
+const DevEnvPage = () => {
 	return (
 		<Grid container direction='column'>
 			<Grid item container justify='center'>
@@ -30,6 +30,6 @@ function CloudOnePage() {
 			</Grid>
 		</Grid>
 	);
-}
+};
 
-export default CloudOnePage;
+export default DevEnvPage;

@@ -7,7 +7,7 @@ import prodBottomImg from '../style/images/production-bottom.jpg';
 
 import EnvImg from './EnvImg';
 
-function ProductionPage() {
+const ProdEnvPage = () => {
 	return (
 		<Grid container direction='column'>
 			<Grid item container justify='center'>
@@ -37,6 +37,6 @@ function ProductionPage() {
 			</Grid>
 		</Grid>
 	);
-}
+};
 
-export default ProductionPage;
+export default ProdEnvPage;

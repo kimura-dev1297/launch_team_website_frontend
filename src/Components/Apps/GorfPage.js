@@ -11,12 +11,12 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-export default function MetroidPage() {
+export default function GorfPage() {
 	const classes = useStyles();
 
 	return (
 		<div className={classes.root}>
-			<AppInfoLayout logo={logo} description={AppInfo.description.metroid} poc={AppInfo.poc.metroid} />
+			<AppInfoLayout logo={logo} description={AppInfo.description.gorf} poc={AppInfo.poc.gorf} />
 		</div>
 	);
 }

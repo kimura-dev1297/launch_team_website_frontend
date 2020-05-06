@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import logo from '../../style/images/Metroid logo.png';
+import logo from '../../style/images/Starfox Logo.png';
 import AppInfo from './AppInfo';
 import AppInfoLayout from '../AppInfoLayout';
 
@@ -11,12 +11,12 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-export default function MetroidPage() {
+export default function StarfoxPage() {
 	const classes = useStyles();
 
 	return (
 		<div className={classes.root}>
-			<AppInfoLayout logo={logo} description={AppInfo.description.metroid} poc={AppInfo.poc.metroid} />
+			<AppInfoLayout logo={logo} description={AppInfo.description.starfox} poc={AppInfo.poc.starfox} />
 		</div>
 	);
 }
