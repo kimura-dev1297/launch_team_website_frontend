@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-export default function NavEnvMenu() {
+export default function NavEAppMenu() {
 	const [ anchorEl, setAnchorEl ] = React.useState(null);
 
 	const handleClick = (event) => {
@@ -36,17 +36,25 @@ export default function NavEnvMenu() {
 				onClick={handleClick}
 				variant='contained'
 				size='small'
-				style={{ margin: '0 1rem' }}
 			>
-				Environments
+				Applications
 			</Button>
 			<Menu id='simple-menu' anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
-				<Link to='/cloud-one'>
-					<MenuItem onClick={handleClose}>Cloud One</MenuItem>
+				<Link to='/app/metroid'>
+					<MenuItem onClick={handleClose}>Metroid</MenuItem>
 				</Link>
 
-				<Link to='/production'>
-					<MenuItem onClick={handleClose}>Production</MenuItem>
+				<Link to='/app/starfox'>
+					<MenuItem onClick={handleClose}>Starfox</MenuItem>
+				</Link>
+				<Link to='/app/outrun'>
+					<MenuItem onClick={handleClose}>Outrun</MenuItem>
+				</Link>
+				<Link to='/app/gorf'>
+					<MenuItem onClick={handleClose}>Gorf</MenuItem>
+				</Link>
+				<Link to='/app/nova'>
+					<MenuItem onClick={handleClose}>Nova</MenuItem>
 				</Link>
 			</Menu>
 		</div>

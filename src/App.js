@@ -4,6 +4,7 @@ import Production from './Components/ProductionPage';
 import CloudOnePage from './Components/CloudOnePage';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Grid } from '@material-ui/core';
+import MetroidPage from './Components/Apps/MetroidPage';
 
 function App() {
 	return (
@@ -20,6 +21,7 @@ function App() {
 						<Switch>
 							<Route path='/production' component={Production} />
 							<Route path='/cloud-one' component={CloudOnePage} />
+							<Route path='/app/metroid' component={MetroidPage} />
 						</Switch>
 					</Grid>
 					{/* This is second side panel */}
