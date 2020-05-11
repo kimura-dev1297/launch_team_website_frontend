@@ -32,7 +32,7 @@ export default function NavEnvMenu() {
 					<MenuItem onClick={handleClose}>Development</MenuItem>
 				</Link>
 
-				<Link to='/environment/production'>
+				<Link to='/environment/prod'>
 					<MenuItem onClick={handleClose}>Production</MenuItem>
 				</Link>
 			</Menu>

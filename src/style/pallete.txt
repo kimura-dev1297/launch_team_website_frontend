@@ -1,0 +1,7 @@
+ //  Red - BD1E1E,
+//  Lighter-red D88373,
+//  Tan/begie  F5E2C8,
+//  dark blue #18206F,
+//  forest green #313715
+
+// BD1E1E - D88373 - F5E2C8 - 18206F - 17255A 

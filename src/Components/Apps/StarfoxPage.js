@@ -1,8 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import logo from '../../style/images/Starfox Logo.png';
-import AppInfo from './AppInfo';
-import AppInfoLayout from '../AppInfoLayout';
+import appInfo from './appInfo';
+import AppDashBoard from '../AppDashBoard';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -16,7 +16,7 @@ export default function StarfoxPage() {
 
 	return (
 		<div className={classes.root}>
-			<AppInfoLayout logo={logo} description={AppInfo.description.starfox} poc={AppInfo.poc.starfox} />
+			<AppDashBoard logo={logo} description={appInfo.description.starfox} poc={appInfo.poc.starfox} />
 		</div>
 	);
 }

@@ -12,7 +12,7 @@ const ProdEnvPage = () => {
 		<Grid container direction='column'>
 			<Grid item container justify='center'>
 				<Grid item container justify='center' alignItems='center' xs={12} style={{ paddingTop: '1.5rem' }}>
-					<Typography variant='h6' gutterBottom>
+					<Typography variant='subtitle2' gutterBottom>
 						Available Developer Tools
 					</Typography>
 				</Grid>
@@ -20,6 +20,11 @@ const ProdEnvPage = () => {
 					<Grid item xs={12} style={{ paddingBottom: '1.5rem' }}>
 						<EnvImg img={cntrlPaneImg} alt='Available Developer Tools' />
 					</Grid>
+				</Grid>
+				<Grid item container justify='center' alignItems='center' xs={12} style={{ marginBottom: '0.5rm' }}>
+					<Typography variant='h6' gutterBottom>
+						Production Environment
+					</Typography>
 				</Grid>
 				<Grid item container direction='row' spacing={4}>
 					<Grid item xs={12} sm={6}>

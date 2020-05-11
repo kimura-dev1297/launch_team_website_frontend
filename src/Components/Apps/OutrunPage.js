@@ -1,8 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import logo from '../../style/images/Outrun Logo.png';
-import AppInfo from './AppInfo';
-import AppInfoLayout from '../AppInfoLayout';
+import appInfo from './appInfo';
+import AppDashBoard from '../AppDashBoard';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -16,7 +16,7 @@ export default function OutrunPage() {
 
 	return (
 		<div className={classes.root}>
-			<AppInfoLayout logo={logo} description={AppInfo.description.outrun} poc={AppInfo.poc.outrun} />
+			<AppDashBoard logo={logo} description={appInfo.description.outrun} poc={appInfo.poc.outrun} />
 		</div>
 	);
 }
