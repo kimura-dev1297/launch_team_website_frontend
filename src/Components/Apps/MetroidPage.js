@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import logo from '../../style/images/Metroid logo.png';
 import appInfo from './appInfo';
-import AppDashBoard from '../AppDashBoard';
+import AppDashboard from '../AppDashboard';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -16,7 +16,7 @@ export default function MetroidPage() {
 
 	return (
 		<div className={classes.root}>
-			<AppDashBoard logo={logo} description={appInfo.description.metroid} poc={appInfo.poc.metroid} />
+			<AppDashboard logo={logo} description={appInfo.description.metroid} poc={appInfo.poc.metroid} />
 		</div>
 	);
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import logo from '../../style/images/Metroid logo.png';
 import appInfo from './appInfo';
-import AppDashBoard from '../AppDashboard';
+import AppDashboard from '../AppDashboard';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -16,7 +16,7 @@ export default function GorfPage() {
 
 	return (
 		<div className={classes.root}>
-			<AppDashBoard logo={logo} description={appInfo.description.gorf} poc={appInfo.poc.gorf} />
+			<AppDashboard logo={logo} description={appInfo.description.gorf} poc={appInfo.poc.gorf} />
 		</div>
 	);
 }

@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import AppLinks from './AppLinks';
 import AppDescription from './AppDescription';
 
-export default function AppDashBoard({ logo, description, poc }) {
+export default function AppDashboard({ logo, description, poc }) {
 	return (
 		<Grid container style={{ backgroundColor: '#81d4fa' }}>
 			<AppDescription logo={logo} description={description} poc={poc} />
