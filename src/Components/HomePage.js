@@ -1,12 +1,10 @@
-// import React from 'react';
-// import { makeStyles } from '@material-ui/core/styles';
-// import Paper from '@material-ui/core/Paper';
-// import Grid from '@material-ui/core/Grid';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 
-// const useStyles = makeStyles((theme) => ({}));
+const useStyles = makeStyles((theme) => ({}));
 
-// export default function HomePage() {
-// 	const classes = useStyles();
+export default function HomePage() {
+	const classes = useStyles();
 
-// 	return <div className={classes.root}>Home</div>;
-// }
+	return <div className={classes.root}>e</div>;
+}
