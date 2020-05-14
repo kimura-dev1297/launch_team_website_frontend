@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-export default function AppDescription({ logo, description, poc }) {
+export default function AppDescription({ logo, description, pm, email, phone }) {
 	const classes = useStyles();
 	return (
 		<Grid item xs={12} sm={6}>
@@ -46,10 +46,16 @@ export default function AppDescription({ logo, description, poc }) {
 					{/* Area 3/3  */}
 					<Grid item xs={12} style={{ backgroundColor: '#313715', marginTop: '0.5rem' }}>
 						<Paper className={classes.paper}>
-							<Typography variant='h5'>PM - Point Of Contact</Typography>
+							<Typography variant='h5'>Point Of Contact</Typography>
 
 							<Typography variant='body2' color='textSecondary'>
-								{poc}
+								<strong>Name: </strong> {pm}
+							</Typography>
+							<Typography variant='body2' color='textSecondary'>
+								<strong>Email: </strong> {email}
+							</Typography>
+							<Typography variant='body2' color='textSecondary'>
+								<strong>Phone: </strong> {phone}
 							</Typography>
 						</Paper>
 					</Grid>

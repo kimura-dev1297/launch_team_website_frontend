@@ -7,6 +7,8 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { Divider } from '@material-ui/core';
+import Link from '@material-ui/core/Link';
+import appInfo from './Apps/appInfo';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -26,16 +28,16 @@ const useStyles = makeStyles((theme) => ({
 	},
 	listItemText: {
 		lineHeight: 0
+	},
+	link: {
+		'& > * + *': {
+			marginLeft: theme.spacing(2)
+		}
 	}
-
-	// paper: {
-	// 	padding: theme.spacing(2),
-	// 	color: theme.palette.text.secondary
-	// }
 }));
 
 function generate(element) {
-	return [ 0, 1, 2 ].map((value) =>
+	return [ 0, 1, 2, 3 ].map((value) =>
 		React.cloneElement(element, {
 			key: value
 		})
@@ -46,6 +48,10 @@ export default function AppLinks() {
 	const classes = useStyles();
 	const [ dense, setDense ] = React.useState(false);
 	const [ secondary, setSecondary ] = React.useState(false);
+
+	const vegatables = appInfo.vegatables;
+
+	// const preventDefault = (event) => event.preventDefault() ;
 
 	return (
 		<Grid
@@ -59,27 +65,35 @@ export default function AppLinks() {
 			style={{ backgroundColor: '#D88373' }}
 		>
 			<div className={classes.root}>
-				<Grid container item spacing={2}>
-					<Typography variant='subtitle2' className={classes.title}>
-						Artifact Repo Links
-					</Typography>
+				<Grid container item justify='center' item spacing={2}>
+					<Grid item>
+						<Typography variant='subtitle2' className={classes.title}>
+							Artifact Repo Links
+						</Typography>
+					</Grid>
+
 					<Grid item xs={12} style={{ backgroundColor: '#313715' }}>
 						<div className={classes.demo}>
 							<List dense={dense}>
 								{generate(
 									<ListItem className={classes.listStyles}>
-										<ListItemText
-											className={classes.listItemText}
-											disableGutters
-											primary='Single-line item'
-											secondary={secondary ? 'Secondary text' : null}
+										<Link
+											href='#'
+											component='a'
+											variant='body2'
+											onClick={(event) => {
+												event.preventDefault();
+												console.info("I'm a button.");
+											}}
 										/>
+										Single Item Link
 									</ListItem>
 								)}
 							</List>
 						</div>
 					</Grid>
-					<Grid item xs={12} md={6} style={{ backgroundColor: '#313715' }}>
+
+					<Grid item xs={12} style={{ backgroundColor: '#313715', marginTop: '1rem' }}>
 						<Typography variant='subtitle2' className={classes.title}>
 							Scan findings
 						</Typography>
@@ -87,54 +101,73 @@ export default function AppLinks() {
 							<List dense={dense}>
 								{generate(
 									<ListItem className={classes.listStyles}>
-										<ListItemText
-											className={classes.listItemText}
-											disableGutters
-											primary='Single-line item'
-											secondary={secondary ? 'Secondary text' : null}
-										/>
+										<Link
+											href='#'
+											component='a'
+											variant='body2'
+											onClick={(event) => {
+												event.preventDefault();
+												console.info("I'm a button.");
+											}}
+										>
+											Single Item Link
+										</Link>
 									</ListItem>
 								)}
 							</List>
 						</div>
 					</Grid>
+					{/* End of Container */}
 				</Grid>
-				<Grid container direction='column' style={{ backgroundColor: '#313715' }}>
-					<Grid item xs={12}>
+
+				{/* Bottom Section */}
+
+				<Grid container item spacing={2} style={{ backgroundColor: '#313715' }}>
+					<Grid item>
 						<Typography variant='subtitle2' className={classes.title}>
 							SD Elements/SSP
 						</Typography>
+					</Grid>
+					<Grid item xs={12} style={{ paddingBottom: '0' }}>
 						<div className={classes.demo}>
 							<List dense={dense}>
 								{generate(
 									<ListItem className={classes.listStyles}>
-										<ListItemText
-											className={classes.listItemText}
-											disableGutters
-											primary='Single-line item'
-											secondary={secondary ? 'Secondary text' : null}
-										/>
+										<Link
+											href='#'
+											component='a'
+											variant='body2'
+											onClick={(event) => {
+												event.preventDefault();
+												console.info("I'm a button.");
+											}}
+										>
+											Single Item Link
+										</Link>
 									</ListItem>
 								)}
 							</List>
 						</div>
 					</Grid>
 
-					<Grid item xs={12}>
-						{/* <Typography variant='subtitle2' className={classes.title}>
-						SSP
-					</Typography> */}
+					<Grid item xs={12} style={{ paddingTop: '0' }}>
 						<Divider />
+
 						<div className={classes.demo}>
 							<List dense={dense}>
 								{generate(
 									<ListItem className={classes.listStyles}>
-										<ListItemText
-											className={classes.listItemText}
-											disableGutters
-											primary='Single-line item'
-											secondary={secondary ? 'Secondary text' : null}
-										/>
+										<Link
+											href='#'
+											component='a'
+											variant='body2'
+											onClick={(event) => {
+												event.preventDefault();
+												console.info("I'm a button.");
+											}}
+										>
+											Single Item Link
+										</Link>
 									</ListItem>
 								)}
 							</List>
