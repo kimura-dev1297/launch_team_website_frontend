@@ -6,8 +6,8 @@ const AppInfo = {
 		improve the accuracy of
 		Space Object Identification
 		collection and analysis.`,
-		gorf: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum`,
-		nova: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum`
+		gorf: `Spacedesk streamlines the way combined forces request and receive space support`,
+		nova: `Relay is a space operation management system that helps operators from CSpOC SPD and COD teams to plan, execute and assess space operations effectively.`
 	},
 
 	vegatables: [ 'Cabbage', 'Turnip', 'Radish', 'Carrot' ],
@@ -21,22 +21,22 @@ const AppInfo = {
 		starfox: {
 			pm: `Jake Webb`,
 			email: `david.webb@sage.northcom.mil`,
-			phone: `513-370-6467`
+			phone: `(513) 370-6467`
 		},
 		outrun: {
-			pm: ``,
-			email: ``,
-			phone: ``
+			pm: `Jacob Lindell`,
+			email: `jacob.lindell@sage.northcom.mil`,
+			phone: `XXX-XXX-XXXX`
 		},
 		gorf: {
-			pm: ``,
-			email: ``,
-			phone: ``
+			pm: `Kyle Planeaux`,
+			email: `kyle.planeaux@sage.northcom.mil`,
+			phone: `(310) 987-6779`
 		},
 		nova: {
-			pm: ``,
-			email: ``,
-			phone: ``
+			pm: `Andrew Pommersheim`,
+			email: `andrew.pommersheim@sage.northcom.mil`,
+			phone: `(240) 482-7052`
 		}
 	}
 };
