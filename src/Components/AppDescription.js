@@ -25,13 +25,15 @@ export default function AppDescription({ logo, description, pm, email, phone }) 
 					container
 					direction='column'
 					justify='center'
-					alignItems='center'
+					alignItems='strecth'
 					spacing={3}
 					style={{ backgroundColor: '#D88373' }}
 				>
 					{/* Area 1/3  */}
-					<Grid item xs={5}>
-						<Avatar src={logo} component='div' className={classes.avatarStyles} />
+					<Grid container item justify='center' alignItems='center'>
+						<Grid item xs={5}>
+							<Avatar src={logo} component='div' className={classes.avatarStyles} />
+						</Grid>
 					</Grid>
 
 					{/* Area 2/3  */}

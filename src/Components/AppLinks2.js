@@ -25,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
 	},
 	listStyles: {
 		paddingTop: 0
-		// paddingBottom: 0
 	},
 	listItemText: {
 		lineHeight: 0
