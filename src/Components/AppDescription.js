@@ -24,42 +24,49 @@ export default function AppDescription({ logo, description, pm, email, phone }) 
 				<Grid
 					container
 					direction='column'
-					justify='center'
-					alignItems='strecth'
+					// justify='space-around'
+					// alignItems='strecth'
 					spacing={3}
 					style={{ backgroundColor: '#D88373' }}
 				>
 					{/* Area 1/3  */}
-					<Grid container item justify='center' alignItems='center'>
-						<Grid item xs={5}>
+					<Grid container item justify='center'>
+						{/* <Grid item xs={5}>
 							<Avatar src={logo} component='div' className={classes.avatarStyles} />
+						</Grid> */}
+
+						<Grid container item style={{ width: '15rem' }}>
+							<img src={logo} style={{ width: '100%' }} alt='' />
 						</Grid>
 					</Grid>
 
-					{/* Area 2/3  */}
-					<Grid item xs={12} style={{ backgroundColor: '#313715' }}>
-						<Paper className={classes.paper}>
-							<Typography variant='h5'>Application Description</Typography>
+					<Grid container item xs={12} justify='space-between'>
+						{/* Area 2/3  */}
 
-							<Typography variant='body2'>{description}</Typography>
-						</Paper>
-					</Grid>
+						<Grid item xs={12} style={{ backgroundColor: '#313715' }}>
+							<Paper className={classes.paper}>
+								<Typography variant='h5'>Application Description</Typography>
 
-					{/* Area 3/3  */}
-					<Grid item xs={12} style={{ backgroundColor: '#313715', marginTop: '0.5rem' }}>
-						<Paper className={classes.paper}>
-							<Typography variant='h5'>Point Of Contact</Typography>
+								<Typography variant='body2'>{description}</Typography>
+							</Paper>
+						</Grid>
 
-							<Typography variant='body2' color='textSecondary'>
-								<strong>Name: </strong> {pm}
-							</Typography>
-							<Typography variant='body2' color='textSecondary'>
-								<strong>Email: </strong> {email}
-							</Typography>
-							<Typography variant='body2' color='textSecondary'>
-								<strong>Phone: </strong> {phone}
-							</Typography>
-						</Paper>
+						{/* Area 3/3  */}
+						<Grid item xs={12} style={{ backgroundColor: '#313715', marginTop: '0.5rem' }}>
+							<Paper className={classes.paper}>
+								<Typography variant='h5'>Point Of Contact</Typography>
+
+								<Typography variant='body2' color='textSecondary'>
+									<strong>Name: </strong> {pm}
+								</Typography>
+								<Typography variant='body2' color='textSecondary'>
+									<strong>Email: </strong> {email}
+								</Typography>
+								<Typography variant='body2' color='textSecondary'>
+									<strong>Phone: </strong> {phone}
+								</Typography>
+							</Paper>
+						</Grid>
 					</Grid>
 				</Grid>
 			</Paper>
