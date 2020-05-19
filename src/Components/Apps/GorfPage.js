@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import logo from '../../style/images/Metroid logo.png';
+import logo from '../../style/images/Gorf-Logo.png';
 import appInfo from './appInfo';
 import AppDashboard from '../AppDashboard';
 
@@ -16,7 +16,13 @@ export default function GorfPage() {
 
 	return (
 		<div className={classes.root}>
-			<AppDashboard logo={logo} description={appInfo.description.gorf} poc={appInfo.poc.gorf} />
+			<AppDashboard
+				logo={logo}
+				description={appInfo.description.gorf}
+				pm={appInfo.poc.gorf.pm}
+				email={appInfo.poc.gorf.email}
+				phone={appInfo.poc.gorf.phone}
+			/>
 		</div>
 	);
 }

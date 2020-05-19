@@ -16,7 +16,13 @@ export default function NovaPage() {
 
 	return (
 		<div className={classes.root}>
-			<AppDashboard logo={logo} description={appInfo.description.gorf} poc={appInfo.poc.gorf} />
+			<AppDashboard
+				logo={logo}
+				description={appInfo.description.nova}
+				pm={appInfo.poc.nova.pm}
+				email={appInfo.poc.nova.email}
+				phone={appInfo.poc.nova.phone}
+			/>
 		</div>
 	);
 }

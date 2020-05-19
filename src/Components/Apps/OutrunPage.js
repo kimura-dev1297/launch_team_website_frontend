@@ -16,7 +16,13 @@ export default function OutrunPage() {
 
 	return (
 		<div className={classes.root}>
-			<AppDashboard logo={logo} description={appInfo.description.outrun} poc={appInfo.poc.outrun} />
+			<AppDashboard
+				logo={logo}
+				description={appInfo.description.outrun}
+				pm={appInfo.poc.outrun.pm}
+				email={appInfo.poc.outrun.email}
+				phone={appInfo.poc.outrun.phone}
+			/>
 		</div>
 	);
 }
