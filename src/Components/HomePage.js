@@ -6,5 +6,5 @@ const useStyles = makeStyles((theme) => ({}));
 export default function HomePage() {
 	const classes = useStyles();
 
-	return <div className={classes.root}>e</div>;
+	return <div className={classes.root} />;
 }

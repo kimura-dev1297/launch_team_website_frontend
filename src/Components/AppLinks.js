@@ -19,15 +19,22 @@ const useStyles = makeStyles((theme) => ({
 		backgroundColor: theme.palette.background.paper
 	},
 	title: {
-		margin: theme.spacing(1, 0, 1),
-		color: 'white'
+		margin: '5px 0 5px 0',
+		color: 'white',
+		padding: '0'
 	},
 	listStyles: {
 		paddingTop: 0
-		// paddingBottom: 0
 	},
 	listItemText: {
 		lineHeight: 0
+	},
+	paper: {
+		padding: '0',
+		color: theme.palette.text.secondary
+	},
+	centeringContainers: {
+		margin: '0 auto'
 	},
 	link: {
 		'& > * + *': {
@@ -54,127 +61,119 @@ export default function AppLinks() {
 	// const preventDefault = (event) => event.preventDefault() ;
 
 	return (
-		<Grid
-			container
-			item
-			xs={12}
-			sm={6}
-			direction='column'
-			justify='center'
-			alignItems='center'
-			style={{ backgroundColor: '#D88373' }}
-		>
-			<div className={classes.root}>
-				<Grid container item justify='center' item spacing={2}>
-					<Grid item>
-						<Typography variant='subtitle2' className={classes.title}>
-							Artifact Repo Links
-						</Typography>
-					</Grid>
-
-					<Grid item xs={12} style={{ backgroundColor: '#313715' }}>
-						<div className={classes.demo}>
-							<List dense={dense}>
-								{generate(
-									<ListItem className={classes.listStyles}>
-										<Link
-											href='#'
-											component='a'
-											variant='body2'
-											onClick={(event) => {
-												event.preventDefault();
-												console.info("I'm a button.");
-											}}
-										/>
-										Single Item Link
-									</ListItem>
-								)}
-							</List>
-						</div>
-					</Grid>
-
-					<Grid item xs={12} style={{ backgroundColor: '#313715', marginTop: '1rem' }}>
-						<Typography variant='subtitle2' className={classes.title}>
-							Scan findings
-						</Typography>
-						<div className={classes.demo}>
-							<List dense={dense}>
-								{generate(
-									<ListItem className={classes.listStyles}>
-										<Link
-											href='#'
-											component='a'
-											variant='body2'
-											onClick={(event) => {
-												event.preventDefault();
-												console.info("I'm a button.");
-											}}
-										>
-											Single Item Link
-										</Link>
-									</ListItem>
-								)}
-							</List>
-						</div>
-					</Grid>
-					{/* End of Container */}
+		<Grid container xs={12} sm={6} direction='column' style={{ backgroundColor: '#D88373', padding: '1rem' }}>
+			<Grid container>
+				<Grid container item justify='center'>
+					<Typography variant='subtitle2' style={{ fontSize: '16px' }} className={classes.title}>
+						Artifact Repo Links
+					</Typography>
 				</Grid>
-
-				{/* Bottom Section */}
-
-				<Grid container item spacing={2} style={{ backgroundColor: '#313715' }}>
-					<Grid item>
-						<Typography variant='subtitle2' className={classes.title}>
-							SD Elements/SSP
-						</Typography>
-					</Grid>
-					<Grid item xs={12} style={{ paddingBottom: '0' }}>
-						<div className={classes.demo}>
-							<List dense={dense}>
-								{generate(
-									<ListItem className={classes.listStyles}>
-										<Link
-											href='#'
-											component='a'
-											variant='body2'
-											onClick={(event) => {
-												event.preventDefault();
-												console.info("I'm a button.");
-											}}
-										>
-											Single Item Link
-										</Link>
-									</ListItem>
-								)}
-							</List>
-						</div>
-					</Grid>
-
-					<Grid item xs={12} style={{ paddingTop: '0' }}>
-						<Divider />
-
-						<div className={classes.demo}>
-							<List dense={dense}>
-								{generate(
-									<ListItem className={classes.listStyles}>
-										<Link
-											href='#'
-											component='a'
-											variant='body2'
-											onClick={(event) => {
-												event.preventDefault();
-												console.info("I'm a button.");
-											}}
-										>
-											Single Item Link
-										</Link>
-									</ListItem>
-								)}
-							</List>
-						</div>
-					</Grid>
+				<Grid item xs={9} className={classes.centeringContainers}>
+					<Paper className={classes.paper}>
+						<List>
+							{generate(
+								<ListItem className={classes.listStyles}>
+									<ListItemText
+										className={classes.listItemText}
+										disableGutters
+										primary='Single-line item'
+										secondary={secondary ? 'Secondary text' : null}
+									/>
+								</ListItem>
+							)}
+						</List>
+					</Paper>
 				</Grid>
-			</div>
+			</Grid>
+			<Grid container>
+				<Grid container item justify='center'>
+					<Typography variant='subtitle2' style={{ fontSize: '16px' }} className={classes.title}>
+						API Endpoints
+					</Typography>
+				</Grid>
+				<Grid item xs={9} className={classes.centeringContainers}>
+					<Paper className={classes.paper}>
+						<List>
+							{generate(
+								<ListItem className={classes.listStyles}>
+									<ListItemText
+										className={classes.listItemText}
+										disableGutters
+										primary='Single-line item'
+										secondary={secondary ? 'Secondary text' : null}
+									/>
+								</ListItem>
+							)}
+						</List>
+					</Paper>
+				</Grid>
+			</Grid>
+			<Grid container>
+				<Grid container item justify='center' alignItems='center'>
+					<Typography variant='subtitle2' style={{ fontSize: '16px' }} className={classes.title}>
+						Scan Findings
+					</Typography>
+				</Grid>
+				<Grid item xs={9} className={classes.centeringContainers}>
+					<Paper className={classes.paper}>
+						<List>
+							{generate(
+								<ListItem className={classes.listStyles}>
+									<ListItemText
+										className={classes.listItemText}
+										disableGutters
+										primary='Single-line item'
+										secondary={secondary ? 'Secondary text' : null}
+									/>
+								</ListItem>
+							)}
+						</List>
+					</Paper>
+				</Grid>
+			</Grid>
+			​
+			<Grid container>
+				<Grid container item justify='center'>
+					<Typography variant='subtitle2' style={{ fontSize: '16px' }} className={classes.title}>
+						SD Elements/SSP
+					</Typography>
+				</Grid>
+				<Grid item xs={9} className={classes.centeringContainers} style={{ paddingBottom: '0' }}>
+					<Paper className={classes.paper}>
+						<List>
+							{generate(
+								<ListItem className={classes.listStyles}>
+									<ListItemText
+										className={classes.listItemText}
+										disableGutters
+										primary='Single-line item'
+										secondary={secondary ? 'Secondary text' : null}
+									/>
+								</ListItem>
+							)}
+						</List>
+					</Paper>
+				</Grid>
+			</Grid>
+			<Grid container>
+				<Grid item xs={9} className={classes.centeringContainers} style={{ paddingTop: '0' }}>
+					<Divider />
+					<Paper className={classes.paper}>
+						<List>
+							{generate(
+								<ListItem className={classes.listStyles}>
+									<ListItemText
+										className={classes.listItemText}
+										disableGutters
+										primary='Single-line item'
+										secondary={secondary ? 'Secondary text' : null}
+									/>
+								</ListItem>
+							)}
+						</List>
+					</Paper>
+				</Grid>
+			</Grid>
 		</Grid>
 	);
 }
