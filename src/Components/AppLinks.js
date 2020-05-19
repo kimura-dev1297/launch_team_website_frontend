@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function generate(element) {
-	return [ 0, 1, 2, 3 ].map((value) =>
+	return [ 0, 1, 2 ].map((value) =>
 		React.cloneElement(element, {
 			key: value
 		})
@@ -55,10 +55,6 @@ export default function AppLinks() {
 	const classes = useStyles();
 	const [ dense, setDense ] = React.useState(false);
 	const [ secondary, setSecondary ] = React.useState(false);
-
-	const vegatables = appInfo.vegatables;
-
-	// const preventDefault = (event) => event.preventDefault() ;
 
 	return (
 		<Grid container xs={12} sm={6} direction='column' style={{ backgroundColor: '#D88373', padding: '1rem' }}>

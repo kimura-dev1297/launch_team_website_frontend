@@ -2,10 +2,13 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import { Avatar } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles((theme) => ({
+	root: {
+		flexGrow: 1
+	},
 	paper: {
 		padding: theme.spacing(2),
 		color: theme.palette.text.secondary
@@ -15,61 +18,62 @@ const useStyles = makeStyles((theme) => ({
 		height: 'auto'
 	}
 }));
-
-export default function AppDescription({ logo, description, pm, email, phone }) {
+export default function AppDescription({ teamName, logo, description, pm, email, phone }) {
 	const classes = useStyles();
 	return (
-		<Grid item xs={12} sm={6}>
-			<Paper className={classes.paper}>
-				<Grid
-					container
-					direction='column'
-					// justify='space-around'
-					// alignItems='strecth'
-					spacing={3}
-					style={{ backgroundColor: '#D88373' }}
-				>
-					{/* Area 1/3  */}
-					<Grid container item justify='center'>
-						{/* <Grid item xs={5}>
-							<Avatar src={logo} component='div' className={classes.avatarStyles} />
-						</Grid> */}
-
-						<Grid container item style={{ width: '15rem' }}>
-							<img src={logo} style={{ width: '100%' }} alt='' />
-						</Grid>
-					</Grid>
-
-					<Grid container item xs={12} justify='space-between'>
-						{/* Area 2/3  */}
-
-						<Grid item xs={12} style={{ backgroundColor: '#313715' }}>
-							<Paper className={classes.paper}>
-								<Typography variant='h5'>Application Description</Typography>
-
-								<Typography variant='body2'>{description}</Typography>
-							</Paper>
-						</Grid>
-
-						{/* Area 3/3  */}
-						<Grid item xs={12} style={{ backgroundColor: '#313715', marginTop: '0.5rem' }}>
-							<Paper className={classes.paper}>
-								<Typography variant='h5'>Point Of Contact</Typography>
-
-								<Typography variant='body2' color='textSecondary'>
-									<strong>Name: </strong> {pm}
-								</Typography>
-								<Typography variant='body2' color='textSecondary'>
-									<strong>Email: </strong> {email}
-								</Typography>
-								<Typography variant='body2' color='textSecondary'>
-									<strong>Phone: </strong> {phone}
-								</Typography>
-							</Paper>
-						</Grid>
+		<Grid container item direction='column' xs={12} sm={6} style={{ padding: '1rem 2rem' }} justify='space-evenly'>
+			<Grid container direction='column' alignItems='center' spacing={3}>
+				<Grid container item>
+					<Grid item xs={12}>
+						<Typography variant='h1' component='div'>
+							<Box
+								letterSpacing={4}
+								fontWeight='fontWeightBold'
+								style={{ color: '#eee' }}
+								textAlign='center'
+							>
+								{teamName}
+							</Box>
+						</Typography>
 					</Grid>
 				</Grid>
-			</Paper>
+				{/* Area 1/3  */}
+				<Grid container item style={{ width: '20rem' }}>
+					<Grid item>
+						<img src={logo} style={{ width: '100%' }} alt='' />
+					</Grid>
+				</Grid>
+
+				{/* Area 2/3  */}
+
+				<Grid container item alignItems='strecth'>
+					<Grid item xs={12}>
+						<Grid item container justify='center' style={{ color: 'white' }}>
+							<Typography variant='h5'>Application Description</Typography>
+						</Grid>
+						<Paper className={classes.paper}>
+							<Typography variant='body2'>{description}</Typography>
+						</Paper>
+					</Grid>
+					{/* Area 3/3  */}
+					<Grid item xs={12} style={{ marginTop: '2rem' }}>
+						<Grid item container justify='center' style={{ color: 'white' }}>
+							<Typography variant='h5'>PM - Point Of Contact</Typography>
+						</Grid>
+						<Paper className={classes.paper}>
+							<Typography variant='body2' color='textSecondary'>
+								{pm}
+							</Typography>
+							<Typography variant='body2' color='textSecondary'>
+								{email}
+							</Typography>
+							<Typography variant='body2' color='textSecondary'>
+								{phone}
+							</Typography>
+						</Paper>
+					</Grid>
+				</Grid>
+			</Grid>
 		</Grid>
 	);
 }
