@@ -7,8 +7,6 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { Divider } from '@material-ui/core';
-// import Link from '@material-ui/core/Link';
-import appInfo from './Apps/appInfo';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -35,6 +33,10 @@ const useStyles = makeStyles((theme) => ({
 	},
 	centeringContainers: {
 		margin: '0 auto'
+	},
+	applyOverflow: {
+		maxHeight: '7rem',
+		overflow: 'auto'
 	},
 	link: {
 		'& > * + *': {
@@ -64,7 +66,7 @@ export default function AppLinks() {
 						Artifact Repo Links
 					</Typography>
 				</Grid>
-				<Grid item xs={9} className={classes.centeringContainers}>
+				<Grid item xs={9} className={(classes.centeringContainers, classes.applyOverflow)}>
 					<Paper className={classes.paper}>
 						<List>
 							{generate(
@@ -87,7 +89,7 @@ export default function AppLinks() {
 						API Endpoints
 					</Typography>
 				</Grid>
-				<Grid item xs={9} className={classes.centeringContainers}>
+				<Grid item xs={9} className={(classes.centeringContainers, classes.applyOverflow)}>
 					<Paper className={classes.paper}>
 						<List>
 							{generate(
@@ -110,7 +112,7 @@ export default function AppLinks() {
 						Scan Findings
 					</Typography>
 				</Grid>
-				<Grid item xs={9} className={classes.centeringContainers}>
+				<Grid item xs={9} className={(classes.centeringContainers, classes.applyOverflow)}>
 					<Paper className={classes.paper}>
 						<List>
 							{generate(
@@ -134,7 +136,12 @@ export default function AppLinks() {
 						SD Elements/SSP
 					</Typography>
 				</Grid>
-				<Grid item xs={9} className={classes.centeringContainers} style={{ paddingBottom: '0' }}>
+				<Grid
+					item
+					xs={9}
+					className={(classes.centeringContainers, classes.applyOverflow)}
+					style={{ paddingBottom: '0' }}
+				>
 					<Paper className={classes.paper}>
 						<List>
 							{generate(
@@ -152,7 +159,12 @@ export default function AppLinks() {
 				</Grid>
 			</Grid>
 			<Grid container>
-				<Grid item xs={9} className={classes.centeringContainers} style={{ paddingTop: '0' }}>
+				<Grid
+					item
+					xs={9}
+					className={(classes.centeringContainers, classes.applyOverflow)}
+					style={{ paddingTop: '0' }}
+				>
 					<Divider />
 					<Paper className={classes.paper}>
 						<List>

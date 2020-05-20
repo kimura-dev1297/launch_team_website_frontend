@@ -18,34 +18,19 @@ const useStyles = makeStyles((theme) => ({
 		height: 'auto'
 	}
 }));
+
 export default function AppDescription({ teamName, logo, description, pm, email, phone }) {
 	const classes = useStyles();
 	return (
 		<Grid container item direction='column' xs={12} sm={6} style={{ padding: '1rem 2rem' }} justify='space-evenly'>
 			<Grid container direction='column' alignItems='center' spacing={3}>
-				<Grid container item>
-					<Grid item xs={12}>
-						<Typography variant='h1' component='div'>
-							<Box
-								letterSpacing={4}
-								fontWeight='fontWeightBold'
-								style={{ color: '#eee' }}
-								textAlign='center'
-							>
-								{teamName}
-							</Box>
-						</Typography>
-					</Grid>
-				</Grid>
 				{/* Area 1/3  */}
 				<Grid container item style={{ width: '20rem' }}>
 					<Grid item>
 						<img src={logo} style={{ width: '100%' }} alt='' />
 					</Grid>
 				</Grid>
-
 				{/* Area 2/3  */}
-
 				<Grid container item alignItems='strecth'>
 					<Grid item xs={12}>
 						<Grid item container justify='center' style={{ color: 'white' }}>
