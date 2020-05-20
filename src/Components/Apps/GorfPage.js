@@ -17,7 +17,7 @@ export default function GorfPage() {
 	return (
 		<div className={classes.root}>
 			<AppDashboard
-				teamName={appInfo.teamName.gorf}
+				// teamName={appInfo.teamName.gorf}
 				logo={logo}
 				description={appInfo.description.gorf}
 				pm={appInfo.poc.gorf.pm}

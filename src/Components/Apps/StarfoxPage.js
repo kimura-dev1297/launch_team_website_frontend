@@ -17,7 +17,7 @@ export default function StarfoxPage() {
 	return (
 		<div className={classes.root}>
 			<AppDashboard
-				teamName={appInfo.teamName.starfox}
+				// teamName={appInfo.teamName.starfox}
 				logo={logo}
 				description={appInfo.description.starfox}
 				pm={appInfo.poc.starfox.pm}

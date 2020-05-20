@@ -17,7 +17,7 @@ export default function NovaPage() {
 	return (
 		<div className={classes.root}>
 			<AppDashboard
-				teamName={appInfo.teamName.nova}
+				// teamName={appInfo.teamName.nova}
 				logo={logo}
 				description={appInfo.description.nova}
 				pm={appInfo.poc.nova.pm}

@@ -18,9 +18,7 @@ const theme = createMuiTheme({
 			default: '#BDBDBD'
 		},
 		typography: {
-			button: {
-				fontSize: '1rem'
-			}
+			fontSize: '1rem'
 		}
 	}
 });

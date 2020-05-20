@@ -17,7 +17,7 @@ export default function MetroidPage() {
 	return (
 		<div className={classes.root}>
 			<AppDashboard
-				teamName={appInfo.teamName.metroid}
+				// teamName={appInfo.teamName.metroid}
 				logo={logo}
 				description={appInfo.description.metroid}
 				pm={appInfo.poc.metroid.pm}
