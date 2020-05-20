@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function generate(element) {
-	return [ 0, 1, 2 ].map((value) =>
+	return [ 0, 1, 2, 3, 4, 5, 6, 7 ].map((value) =>
 		React.cloneElement(element, {
 			key: value
 		})
@@ -60,14 +60,14 @@ export default function AppLinks() {
 
 	return (
 		<Grid container xs={12} sm={6} direction='column' style={{ backgroundColor: '#D88373', padding: '1rem' }}>
-			<Grid container>
+			<Grid container justify='center'>
 				<Grid container item justify='center'>
 					<Typography variant='subtitle2' style={{ fontSize: '16px' }} className={classes.title}>
 						Artifact Repo Links
 					</Typography>
 				</Grid>
 				<Grid item xs={9} className={(classes.centeringContainers, classes.applyOverflow)}>
-					<Paper className={classes.paper}>
+					<Paper className={classes.paper} square>
 						<List>
 							{generate(
 								<ListItem className={classes.listStyles}>
@@ -83,14 +83,14 @@ export default function AppLinks() {
 					</Paper>
 				</Grid>
 			</Grid>
-			<Grid container>
+			<Grid container justify='center'>
 				<Grid container item justify='center'>
 					<Typography variant='subtitle2' style={{ fontSize: '16px' }} className={classes.title}>
 						API Endpoints
 					</Typography>
 				</Grid>
 				<Grid item xs={9} className={(classes.centeringContainers, classes.applyOverflow)}>
-					<Paper className={classes.paper}>
+					<Paper className={classes.paper} square>
 						<List>
 							{generate(
 								<ListItem className={classes.listStyles}>
@@ -106,14 +106,14 @@ export default function AppLinks() {
 					</Paper>
 				</Grid>
 			</Grid>
-			<Grid container>
+			<Grid container justify='center'>
 				<Grid container item justify='center' alignItems='center'>
 					<Typography variant='subtitle2' style={{ fontSize: '16px' }} className={classes.title}>
 						Scan Findings
 					</Typography>
 				</Grid>
 				<Grid item xs={9} className={(classes.centeringContainers, classes.applyOverflow)}>
-					<Paper className={classes.paper}>
+					<Paper className={classes.paper} square>
 						<List>
 							{generate(
 								<ListItem className={classes.listStyles}>
@@ -130,7 +130,7 @@ export default function AppLinks() {
 				</Grid>
 			</Grid>
 			​
-			<Grid container>
+			<Grid container justify='center'>
 				<Grid container item justify='center'>
 					<Typography variant='subtitle2' style={{ fontSize: '16px' }} className={classes.title}>
 						SD Elements/SSP
@@ -140,9 +140,9 @@ export default function AppLinks() {
 					item
 					xs={9}
 					className={(classes.centeringContainers, classes.applyOverflow)}
-					style={{ paddingBottom: '0' }}
+					style={{ paddingBottom: '0', marginBottom: '.3rem' }}
 				>
-					<Paper className={classes.paper}>
+					<Paper className={classes.paper} square>
 						<List>
 							{generate(
 								<ListItem className={classes.listStyles}>
@@ -158,7 +158,7 @@ export default function AppLinks() {
 					</Paper>
 				</Grid>
 			</Grid>
-			<Grid container>
+			<Grid container justify='center'>
 				<Grid
 					item
 					xs={9}
@@ -166,7 +166,7 @@ export default function AppLinks() {
 					style={{ paddingTop: '0' }}
 				>
 					<Divider />
-					<Paper className={classes.paper}>
+					<Paper className={classes.paper} square>
 						<List>
 							{generate(
 								<ListItem className={classes.listStyles}>
