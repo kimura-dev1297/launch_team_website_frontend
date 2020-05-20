@@ -59,7 +59,7 @@ export default function AppLinks() {
 	const [ secondary, setSecondary ] = React.useState(false);
 
 	return (
-		<Grid container xs={12} sm={6} direction='column' style={{ backgroundColor: '#D88373', padding: '1rem' }}>
+		<Grid container xs={12} sm={6} direction='column' style={{ backgroundColor: 'black', padding: '1rem' }}>
 			<Grid container justify='center'>
 				<Grid container item justify='center'>
 					<Typography variant='subtitle2' style={{ fontSize: '16px' }} className={classes.title}>

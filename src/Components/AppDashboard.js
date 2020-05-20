@@ -5,7 +5,7 @@ import AppDescription from './AppDescription';
 
 export default function AppDashboard({ teamName, logo, description, pm, email, phone }) {
 	return (
-		<Grid container style={{ backgroundColor: '#D88373' }}>
+		<Grid container style={{ backgroundColor: 'black' }}>
 			<AppDescription
 				teamName={teamName}
 				logo={logo}

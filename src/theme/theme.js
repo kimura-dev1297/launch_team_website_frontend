@@ -15,7 +15,7 @@ const theme = createMuiTheme({
 			main: '#17255A'
 		},
 		background: {
-			default: '#F5E2C8'
+			default: '#BDBDBD'
 		},
 		typography: {
 			button: {
